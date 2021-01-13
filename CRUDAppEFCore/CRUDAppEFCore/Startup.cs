@@ -36,17 +36,9 @@ namespace CRUDAppEFCore
             var connectionString = Configuration.GetConnectionString(connectionStringName);
             var migrationAssemblyName = typeof(Startup).Assembly.FullName;
 
-            builder.RegisterType<CrudDbContext>()
-            .WithParameter("connectionString", connectionString).AsSelf();
-            //.WithParameter("migrationAssemblyName", _migrationAssemblyName)
-            //.InstancePerLifetimeScope();
-           
-          //  builder.RegisterType<CrudDbContext>().AsSelf();
-            builder.RegisterType<StudentModel>().AsSelf();
-            
-
+        
             //builder.RegisterModule(new LibraryModule(connectionString, migrationAssemblyName));
-            //builder.RegisterModule(new WebModule(connectionString, migrationAssemblyName));
+            builder.RegisterModule(new WebModule(connectionString, migrationAssemblyName));
         }
         public void ConfigureServices(IServiceCollection services)
         {

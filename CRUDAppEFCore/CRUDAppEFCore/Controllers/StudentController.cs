@@ -25,14 +25,14 @@ namespace CRUDAppEFCore.Controllers
             return View(); 
         }
         [HttpPost]
-        public IActionResult Add(StudentModel student)
+        public IActionResult Add(StudentModel student) 
         {
             student.Add(student);
             //_db.Students.Add(student);
             //_db.SaveChanges();
             student.SaveChanges();
             ViewBag.Departments = model.GetDepartments();
-            return RedirectToAction("GetAll");
+            return RedirectToAction("GetAll"); 
         }
         //public IActionResult GetAll()
         //{
