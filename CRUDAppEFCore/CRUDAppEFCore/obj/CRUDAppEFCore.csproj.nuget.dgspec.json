@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Dev Skill Full Stack ASP.NET Core MVC Trainning\\Practise\\Aspnet-coremvc-Practise-CRUD-Entity-Framework\\CRUDAppEFCore\\CRUDAppEFCore\\CRUDAppEFCore.csproj": {}
+    "F:\\DevSkillFullStackASP.NETCoreMVCTrainning\\Practise\\Aspnet-coremvc-Practise-CRUD-Entity-Framework\\CRUDAppEFCore\\CRUDAppEFCore\\CRUDAppEFCore.csproj": {}
   },
   "projects": {
-    "F:\\Dev Skill Full Stack ASP.NET Core MVC Trainning\\Practise\\Aspnet-coremvc-Practise-CRUD-Entity-Framework\\CRUDAppEFCore\\CRUDAppEFCore\\CRUDAppEFCore.csproj": {
+    "F:\\DevSkillFullStackASP.NETCoreMVCTrainning\\Practise\\Aspnet-coremvc-Practise-CRUD-Entity-Framework\\CRUDAppEFCore\\CRUDAppEFCore\\CRUDAppEFCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Dev Skill Full Stack ASP.NET Core MVC Trainning\\Practise\\Aspnet-coremvc-Practise-CRUD-Entity-Framework\\CRUDAppEFCore\\CRUDAppEFCore\\CRUDAppEFCore.csproj",
+        "projectUniqueName": "F:\\DevSkillFullStackASP.NETCoreMVCTrainning\\Practise\\Aspnet-coremvc-Practise-CRUD-Entity-Framework\\CRUDAppEFCore\\CRUDAppEFCore\\CRUDAppEFCore.csproj",
         "projectName": "CRUDAppEFCore",
-        "projectPath": "F:\\Dev Skill Full Stack ASP.NET Core MVC Trainning\\Practise\\Aspnet-coremvc-Practise-CRUD-Entity-Framework\\CRUDAppEFCore\\CRUDAppEFCore\\CRUDAppEFCore.csproj",
+        "projectPath": "F:\\DevSkillFullStackASP.NETCoreMVCTrainning\\Practise\\Aspnet-coremvc-Practise-CRUD-Entity-Framework\\CRUDAppEFCore\\CRUDAppEFCore\\CRUDAppEFCore.csproj",
         "packagesPath": "C:\\Users\\subroto\\.nuget\\packages\\",
-        "outputPath": "F:\\Dev Skill Full Stack ASP.NET Core MVC Trainning\\Practise\\Aspnet-coremvc-Practise-CRUD-Entity-Framework\\CRUDAppEFCore\\CRUDAppEFCore\\obj\\",
+        "outputPath": "F:\\DevSkillFullStackASP.NETCoreMVCTrainning\\Practise\\Aspnet-coremvc-Practise-CRUD-Entity-Framework\\CRUDAppEFCore\\CRUDAppEFCore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\subroto\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -38,6 +38,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.1.0, )"
+            },
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
               "version": "[3.1.8, )"

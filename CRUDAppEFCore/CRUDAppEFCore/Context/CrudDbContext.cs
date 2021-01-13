@@ -1,5 +1,4 @@
-﻿
-using CRUDAppEFCore.Models;
+﻿using CRUDAppEFCore.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,21 +7,22 @@ using System.Threading.Tasks;
 
 namespace CRUDAppEFCore.Context 
 {
-    public class CrudDbContext:DbContext
+    public class CrudDbContext : DbContext
     {
-        private string _connectionString;
-        public CrudDbContext()
+        private readonly string _connectionString;
+        public CrudDbContext(string connectionString)
         {
-            _connectionString = "Server=DESKTOP-HD3BUG1;Database=UniversityDbEF;User Id=sa;Password=Bina;";
+            // _connectionString = "Server=DESKTOP-HD3BUG1;Database=UniversityDbEF;User Id=sa;Password=subroto;";
+            _connectionString = connectionString;
         }
-        public DbSet<Student> Students { get; set; }
-        public DbSet<Department> Departments { get; set; }
+        public DbSet<StudentModel> Students { get; set; }
+        public DbSet<DepartmentModel> Departments { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-         optionsBuilder.UseSqlServer(_connectionString);
-         optionsBuilder.UseLazyLoadingProxies()
-        .UseSqlServer(_connectionString);
+            optionsBuilder.UseSqlServer(_connectionString);
+            optionsBuilder.UseLazyLoadingProxies()
+           .UseSqlServer(_connectionString);
         }
     }
 }

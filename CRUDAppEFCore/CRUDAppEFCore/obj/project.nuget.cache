@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "h6GzCtsHkLcROLFPSbBiqVBxSQIy9eBbUHqaWUuGDU66gnCbAkLiUmRKeOz6UCmwI5rLfE1PZf2kWnker52h8g==",
+  "dgSpecHash": "DfmMFNbHAIMFnCI016xqgpPwX4dyuD4bEPmPl6jB2lwy0CA0G6XQNOB5QXQX2lVNRNUj33cKuHm3DDZHUCbvSQ==",
   "success": true,
-  "projectFilePath": "F:\\Dev Skill Full Stack ASP.NET Core MVC Trainning\\Practise\\Aspnet-coremvc-Practise-CRUD-Entity-Framework\\CRUDAppEFCore\\CRUDAppEFCore\\CRUDAppEFCore.csproj",
+  "projectFilePath": "F:\\DevSkillFullStackASP.NETCoreMVCTrainning\\Practise\\Aspnet-coremvc-Practise-CRUD-Entity-Framework\\CRUDAppEFCore\\CRUDAppEFCore\\CRUDAppEFCore.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\subroto\\.nuget\\packages\\autofac\\6.0.0\\autofac.6.0.0.nupkg.sha512",
+    "C:\\Users\\subroto\\.nuget\\packages\\autofac.extensions.dependencyinjection\\7.1.0\\autofac.extensions.dependencyinjection.7.1.0.nupkg.sha512",
     "C:\\Users\\subroto\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\subroto\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\3.1.8\\microsoft.aspnetcore.mvc.razor.extensions.3.1.8.nupkg.sha512",
     "C:\\Users\\subroto\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.runtimecompilation\\3.1.8\\microsoft.aspnetcore.mvc.razor.runtimecompilation.3.1.8.nupkg.sha512",

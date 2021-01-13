@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Autofac;
 using CRUDAppEFCore.Context;
 using CRUDAppEFCore.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -11,54 +12,57 @@ namespace CRUDAppEFCore.Controllers
 {
     public class StudentController : Controller
     {
-        CrudDbContext _db = new CrudDbContext();
+        //CrudDbContext _db = new CrudDbContext();
+        StudentModel model = Startup.AutofacContainer.Resolve<StudentModel>();
         public IActionResult Index()
         {
             return View();
         }
         public IActionResult Add()
         {
-            ViewBag.Departments = _db.Departments.ToList();
-            return View();
+            //ViewBag.Departments = _db.Departments.ToList();
+            ViewBag.Departments = model.GetDepartments();
+            return View(); 
         }
         [HttpPost]
-        public IActionResult Add(Student student)
+        public IActionResult Add(StudentModel student)
         {
-            _db.Students.Add(student);
-            _db.SaveChanges();
-            ViewBag.Departments = _db.Departments.ToList();
+            student.Add(student);
+            //_db.Students.Add(student);
+            //_db.SaveChanges();
+            student.SaveChanges();
+            ViewBag.Departments = model.GetDepartments();
             return RedirectToAction("GetAll");
         }
-        public IActionResult GetAll()
-        {
-            var students=_db.Students.ToList();
-            return View(students);
-        }
+        //public IActionResult GetAll()
+        //{
+        //    var students = _db.Students.ToList();
+        //    return View(students);
+        //}
         public IActionResult Edit(int id)
         {
-            var model=_db.Students.Find(id);
-            ViewBag.Departments = _db.Departments.ToList();
+            //var model=_db.Students.Find(id);
+            ViewBag.Departments = model.GetDepartments();
             return View(model);
         }
-
         [HttpPost]
-        public IActionResult Edit(Student student)
+        public IActionResult Edit(StudentModel student)
         {
-            _db.Entry(student).State = EntityState.Modified;
-            _db.SaveChanges();
-            ViewBag.Departments = _db.Departments.ToList();
+            //_db.Entry(student).State = EntityState.Modified;
+            //_db.SaveChanges();
+            ViewBag.Departments = model.GetDepartments();
             return RedirectToAction("GetAll");
         }
         public IActionResult Delete(int id)
         {
-            var model = _db.Students.Find(id);
+           // var model = _db.Students.Find(id);
             return View(model);
         }
         [HttpPost]
-        public IActionResult Delete(Student student)
+        public IActionResult Delete(StudentModel student)
         {
-            _db.Entry(student).State = EntityState.Deleted;
-            _db.SaveChanges();
+            //_db.Entry(student).State = EntityState.Deleted;
+            //_db.SaveChanges();
             return RedirectToAction("GetAll");
         }
     }
