@@ -1,4 +1,4 @@
-﻿using CRUDAppEFCore.Models;
+﻿using CRUDAppEFCore.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -15,9 +15,9 @@ namespace CRUDAppEFCore.Context
             // _connectionString = "Server=DESKTOP-HD3BUG1;Database=UniversityDbEF;User Id=sa;Password=subroto;";
             _connectionString = connectionString;
         }
-        public DbSet<StudentModel> Students { get; set; }
-        public DbSet<DepartmentModel> Departments { get; set; }
-
+        public DbSet<Student> Students { get; set; }
+        public DbSet<Department> Departments { get; set; }
+        
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(_connectionString);

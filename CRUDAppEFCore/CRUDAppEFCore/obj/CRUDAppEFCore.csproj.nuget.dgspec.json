@@ -4,6 +4,69 @@
     "F:\\DevSkillFullStackASP.NETCoreMVCTrainning\\Practise\\Aspnet-coremvc-Practise-CRUD-Entity-Framework\\CRUDAppEFCore\\CRUDAppEFCore\\CRUDAppEFCore.csproj": {}
   },
   "projects": {
+    "F:\\DevSkillFullStackASP.NETCoreMVCTrainning\\Practise\\Aspnet-coremvc-Practise-CRUD-Entity-Framework\\CRUDAppEFCore\\Crud.DataAccessLayer\\Crud.DataAccessLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\DevSkillFullStackASP.NETCoreMVCTrainning\\Practise\\Aspnet-coremvc-Practise-CRUD-Entity-Framework\\CRUDAppEFCore\\Crud.DataAccessLayer\\Crud.DataAccessLayer.csproj",
+        "projectName": "Crud.DataAccessLayer",
+        "projectPath": "F:\\DevSkillFullStackASP.NETCoreMVCTrainning\\Practise\\Aspnet-coremvc-Practise-CRUD-Entity-Framework\\CRUDAppEFCore\\Crud.DataAccessLayer\\Crud.DataAccessLayer.csproj",
+        "packagesPath": "C:\\Users\\subroto\\.nuget\\packages\\",
+        "outputPath": "F:\\DevSkillFullStackASP.NETCoreMVCTrainning\\Practise\\Aspnet-coremvc-Practise-CRUD-Entity-Framework\\CRUDAppEFCore\\Crud.DataAccessLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\subroto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "System.Linq.Dynamic.Core": {
+              "target": "Package",
+              "version": "[1.2.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "F:\\DevSkillFullStackASP.NETCoreMVCTrainning\\Practise\\Aspnet-coremvc-Practise-CRUD-Entity-Framework\\CRUDAppEFCore\\CRUDAppEFCore\\CRUDAppEFCore.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -26,7 +89,11 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "F:\\DevSkillFullStackASP.NETCoreMVCTrainning\\Practise\\Aspnet-coremvc-Practise-CRUD-Entity-Framework\\CRUDAppEFCore\\Crud.DataAccessLayer\\Crud.DataAccessLayer.csproj": {
+                "projectPath": "F:\\DevSkillFullStackASP.NETCoreMVCTrainning\\Practise\\Aspnet-coremvc-Practise-CRUD-Entity-Framework\\CRUDAppEFCore\\Crud.DataAccessLayer\\Crud.DataAccessLayer.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

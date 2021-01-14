@@ -1,6 +1,9 @@
 ﻿using Autofac;
 using CRUDAppEFCore.Context;
 using CRUDAppEFCore.Models;
+using CRUDAppEFCore.Repository;
+using CRUDAppEFCore.Services;
+using CRUDAppEFCore.UnitOfWorks;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,9 +25,13 @@ namespace CRUDAppEFCore
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterType<CrudDbContext>()
-           .WithParameter("connectionString", _connectionString).AsSelf();
+           .WithParameter("connectionString", _connectionString).SingleInstance();
 
-            builder.RegisterType<StudentModel>().AsSelf();
+            //builder.RegisterType<StudentModel>().AsSelf();
+            builder.RegisterType<StudentService>().As<IStudentService>().InstancePerLifetimeScope();
+            builder.RegisterType<StudentUnitOfWork>().As<IStudentUnitOfWork>().InstancePerLifetimeScope();
+            builder.RegisterType<StudentRepository>().As<IStudentRepository>().InstancePerLifetimeScope();
+            builder.RegisterType<DepartmentRepository>().As<IDepartmentRepository>().InstancePerLifetimeScope();
         }
     }
 }

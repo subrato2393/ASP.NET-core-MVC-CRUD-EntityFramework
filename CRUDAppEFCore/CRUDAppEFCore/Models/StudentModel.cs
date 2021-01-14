@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using CRUDAppEFCore.Context;
-using CRUDAppEFCore.Models;
+using CRUDAppEFCore.Entities;
+using CRUDAppEFCore.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,34 +10,52 @@ using System.Threading.Tasks;
 namespace CRUDAppEFCore.Models
 {
     public class StudentModel
-    { 
+    {
         public int Id { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
         public string Address { get; set; }
-        public int DepartmentId { get; set; } 
+        public string DepartmentName { get; set;}
+        public int DepartmentId { get; set; }
         public virtual DepartmentModel Department { get; set; }
-        private readonly CrudDbContext _db;
-        //public string DepartmentName { get; set; }
-        //public Student()
-        //{
-        //    var student = Startup.AutofacContainer.Resolve<Student>();
-        //}
+
+        private readonly IStudentService _studentService;
+        public StudentModel(IStudentService studentService)
+        {
+            _studentService = studentService;
+        }
         public StudentModel()
         {
-            _db = Startup.AutofacContainer.Resolve<CrudDbContext>();
-        }
-        public void Add(StudentModel student)
+            _studentService = Startup.AutofacContainer.Resolve<IStudentService>();
+        } 
+        public void AddStudent()
         {
-            _db.Students.Add(student);
+            _studentService.AddStudentEntity(new Student()
+            {
+                Name = Name,
+                Email = Email,
+                Address = Address,
+                DepartmentId = DepartmentId
+            });
         }
-        public void SaveChanges()
+        public object GetAllStudent()
         {
-            _db.SaveChanges();
+            var studentList = _studentService.GetAllStudents();
+            IEnumerable<StudentModel> studentModel = ConvertStudentEntityToModel(studentList);
+            return studentModel.ToList();
         }
-        public IList<DepartmentModel> GetDepartments()
+
+        private static IEnumerable<StudentModel> ConvertStudentEntityToModel(IList<Student> studentList)
         {
-            return _db.Departments.ToList();
+            return studentList.Select(x => new StudentModel()
+            {
+                Name = x.Name,
+                Address = x.Address,
+                Email = x.Email,
+                DepartmentId = x.DepartmentId,
+                Id = x.Id,
+                DepartmentName = x.Department.Name
+            });
         }
     }
 }
