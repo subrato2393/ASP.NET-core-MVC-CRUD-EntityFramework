@@ -4,7 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
-using CRUDAppEFCore.Context;
+using Crud.Foundation;
+using Crud.Foundation.Contexts;
 using CRUDAppEFCore.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -39,6 +40,7 @@ namespace CRUDAppEFCore
         
             //builder.RegisterModule(new LibraryModule(connectionString, migrationAssemblyName));
             builder.RegisterModule(new WebModule(connectionString, migrationAssemblyName));
+            builder.RegisterModule(new FoundationModule(connectionString, migrationAssemblyName));
         }
         public void ConfigureServices(IServiceCollection services)
         {

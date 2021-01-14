@@ -1,11 +1,11 @@
 ﻿using Crud.DataAccessLayer;
-using CRUDAppEFCore.Repository;
+using Crud.Foundation.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CRUDAppEFCore.UnitOfWorks
+namespace Crud.Foundation.UnitOfWorks
 {
     public interface IStudentUnitOfWork:IUnitOfWork
     {

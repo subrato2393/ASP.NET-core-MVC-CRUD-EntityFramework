@@ -1,12 +1,12 @@
 ﻿using Crud.DataAccessLayer;
-using CRUDAppEFCore.Context;
-using CRUDAppEFCore.Entities;
+using Crud.Foundation.Contexts;
+using Crud.Foundation.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CRUDAppEFCore.Repository
+namespace Crud.Foundation.Repository
 {
     public class DepartmentRepository : Repository<Department, int, CrudDbContext>, IDepartmentRepository
     {

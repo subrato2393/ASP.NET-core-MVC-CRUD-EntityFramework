@@ -1,13 +1,13 @@
-﻿using CRUDAppEFCore.Entities;
+﻿using Crud.Foundation.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CRUDAppEFCore.Context 
+namespace Crud.Foundation.Contexts
 {
-    public class CrudDbContext : DbContext
+    public class CrudDbContext : DbContext, ICrudDbContext
     {
         private readonly string _connectionString;
         public CrudDbContext(string connectionString)
@@ -17,7 +17,7 @@ namespace CRUDAppEFCore.Context
         }
         public DbSet<Student> Students { get; set; }
         public DbSet<Department> Departments { get; set; }
-        
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(_connectionString);

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Autofac;
-using CRUDAppEFCore.Context;
 using CRUDAppEFCore.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -22,7 +21,7 @@ namespace CRUDAppEFCore.Controllers
         }
         public IActionResult Add()
         {
-            var model = new DepartmentModel();
+            var model = Startup.AutofacContainer.Resolve<DepartmentModel>();
             ViewBag.Departments = model.GetDepartments();
             return View();
         }
@@ -34,7 +33,7 @@ namespace CRUDAppEFCore.Controllers
         }
         public IActionResult GetAll()
         {
-            var model = new StudentModel();
+            var model = Startup.AutofacContainer.Resolve<StudentModel>();
             var students = model.GetAllStudent();
             return View(students);
         }

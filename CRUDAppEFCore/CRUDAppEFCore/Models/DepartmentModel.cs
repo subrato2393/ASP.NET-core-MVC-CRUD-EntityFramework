@@ -1,6 +1,6 @@
 ﻿using Autofac;
-using CRUDAppEFCore.Entities;
-using CRUDAppEFCore.Services;
+using Crud.Foundation.Entities;
+using Crud.Foundation.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;

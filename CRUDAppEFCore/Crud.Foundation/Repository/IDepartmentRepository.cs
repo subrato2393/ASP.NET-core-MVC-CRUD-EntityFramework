@@ -1,8 +1,8 @@
 ﻿using Crud.DataAccessLayer;
-using CRUDAppEFCore.Context;
-using CRUDAppEFCore.Entities;
+using Crud.Foundation.Contexts;
+using Crud.Foundation.Entities;
 
-namespace CRUDAppEFCore.Repository
+namespace Crud.Foundation.Repository
 {
     public interface IDepartmentRepository: IRepository<Department, int, CrudDbContext>
     {

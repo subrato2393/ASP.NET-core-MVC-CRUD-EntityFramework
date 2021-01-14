@@ -1,12 +1,11 @@
 ﻿using Autofac;
 using Crud.DataAccessLayer;
-using CRUDAppEFCore.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CRUDAppEFCore.Entities
+namespace Crud.Foundation.Entities
 {
     public class Student:IEntity<int>
     { 

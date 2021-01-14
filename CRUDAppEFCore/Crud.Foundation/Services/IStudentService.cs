@@ -1,10 +1,10 @@
-﻿using CRUDAppEFCore.Entities;
+﻿using Crud.Foundation.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CRUDAppEFCore.Services
+namespace Crud.Foundation.Services
 {
     public interface IStudentService
     {

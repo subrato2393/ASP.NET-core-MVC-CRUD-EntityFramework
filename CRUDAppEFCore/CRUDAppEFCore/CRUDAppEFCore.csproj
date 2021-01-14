@@ -26,6 +26,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Crud.DataAccessLayer\Crud.DataAccessLayer.csproj" />
+    <ProjectReference Include="..\Crud.Foundation\Crud.Foundation.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,12 +1,12 @@
 ﻿using Autofac;
-using CRUDAppEFCore.Entities;
-using CRUDAppEFCore.UnitOfWorks;
+using Crud.Foundation.Entities;
+using Crud.Foundation.UnitOfWorks;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CRUDAppEFCore.Services
+namespace Crud.Foundation.Services
 {
     public class StudentService:IStudentService
     {
@@ -20,10 +20,10 @@ namespace CRUDAppEFCore.Services
         {
             _studentUnitOfWork = studentUnitOfWork;
         }
-        public StudentService()
-        {
-            _studentUnitOfWork = Startup.AutofacContainer.Resolve<IStudentUnitOfWork>();
-        }
+        //public StudentService()
+        //{
+        //    _studentUnitOfWork = Startup.AutofacContainer.Resolve<IStudentUnitOfWork>();
+        //}
         public void AddStudentEntity(Student student)
         {
             _studentUnitOfWork.StudentRepository.Add(student);

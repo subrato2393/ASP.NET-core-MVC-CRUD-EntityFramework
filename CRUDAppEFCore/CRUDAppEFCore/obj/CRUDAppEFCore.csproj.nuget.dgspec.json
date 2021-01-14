@@ -67,6 +67,81 @@
         }
       }
     },
+    "F:\\DevSkillFullStackASP.NETCoreMVCTrainning\\Practise\\Aspnet-coremvc-Practise-CRUD-Entity-Framework\\CRUDAppEFCore\\Crud.Foundation\\Crud.Foundation.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\DevSkillFullStackASP.NETCoreMVCTrainning\\Practise\\Aspnet-coremvc-Practise-CRUD-Entity-Framework\\CRUDAppEFCore\\Crud.Foundation\\Crud.Foundation.csproj",
+        "projectName": "Crud.Foundation",
+        "projectPath": "F:\\DevSkillFullStackASP.NETCoreMVCTrainning\\Practise\\Aspnet-coremvc-Practise-CRUD-Entity-Framework\\CRUDAppEFCore\\Crud.Foundation\\Crud.Foundation.csproj",
+        "packagesPath": "C:\\Users\\subroto\\.nuget\\packages\\",
+        "outputPath": "F:\\DevSkillFullStackASP.NETCoreMVCTrainning\\Practise\\Aspnet-coremvc-Practise-CRUD-Entity-Framework\\CRUDAppEFCore\\Crud.Foundation\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\subroto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "F:\\DevSkillFullStackASP.NETCoreMVCTrainning\\Practise\\Aspnet-coremvc-Practise-CRUD-Entity-Framework\\CRUDAppEFCore\\Crud.DataAccessLayer\\Crud.DataAccessLayer.csproj": {
+                "projectPath": "F:\\DevSkillFullStackASP.NETCoreMVCTrainning\\Practise\\Aspnet-coremvc-Practise-CRUD-Entity-Framework\\CRUDAppEFCore\\Crud.DataAccessLayer\\Crud.DataAccessLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "F:\\DevSkillFullStackASP.NETCoreMVCTrainning\\Practise\\Aspnet-coremvc-Practise-CRUD-Entity-Framework\\CRUDAppEFCore\\CRUDAppEFCore\\CRUDAppEFCore.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -92,6 +167,9 @@
             "projectReferences": {
               "F:\\DevSkillFullStackASP.NETCoreMVCTrainning\\Practise\\Aspnet-coremvc-Practise-CRUD-Entity-Framework\\CRUDAppEFCore\\Crud.DataAccessLayer\\Crud.DataAccessLayer.csproj": {
                 "projectPath": "F:\\DevSkillFullStackASP.NETCoreMVCTrainning\\Practise\\Aspnet-coremvc-Practise-CRUD-Entity-Framework\\CRUDAppEFCore\\Crud.DataAccessLayer\\Crud.DataAccessLayer.csproj"
+              },
+              "F:\\DevSkillFullStackASP.NETCoreMVCTrainning\\Practise\\Aspnet-coremvc-Practise-CRUD-Entity-Framework\\CRUDAppEFCore\\Crud.Foundation\\Crud.Foundation.csproj": {
+                "projectPath": "F:\\DevSkillFullStackASP.NETCoreMVCTrainning\\Practise\\Aspnet-coremvc-Practise-CRUD-Entity-Framework\\CRUDAppEFCore\\Crud.Foundation\\Crud.Foundation.csproj"
               }
             }
           }
